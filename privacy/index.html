@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — My Steady Circle</title>
+  <meta name="description" content="Privacy Policy for the My Steady Circle mobile application." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary:       #2563eb;
+      --primary-dark:  #1d4ed8;
+      --primary-light: #eff6ff;
+      --bg:            #f8fafc;
+      --surface:       #ffffff;
+      --border:        #e5e7eb;
+      --border-strong: #d1d5db;
+      --text-primary:  #111827;
+      --text-secondary:#4b5563;
+      --text-tertiary: #6b7280;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 15px;
+    }
+    .logo-name { font-size: 15px; font-weight: 700; color: var(--text-primary); }
+    .nav-back {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-back:hover { text-decoration: underline; }
+
+    /* LAYOUT */
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* HERO HEADER */
+    .policy-header {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 40px;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+    .policy-badge {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      margin-bottom: 16px;
+    }
+    .policy-header h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .policy-meta {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .policy-meta span::before { content: ''; }
+
+    /* CONTENT CARD */
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* TYPOGRAPHY */
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 40px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    h2:first-child { margin-top: 0; }
+
+    h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 24px 0 8px;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    li {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+    li strong { color: var(--text-primary); }
+
+    a { color: var(--primary); }
+    a:hover { text-decoration: underline; }
+
+    /* TABLE */
+    .table-wrap { overflow-x: auto; margin-bottom: 16px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-weight: 600;
+      text-align: left;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: var(--bg); }
+    td strong { color: var(--text-primary); }
+
+    /* CONTACT BOX */
+    .contact-box {
+      background: var(--primary-light);
+      border: 1px solid #bfdbfe;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-top: 8px;
+    }
+    .contact-box p { margin: 0; color: var(--text-secondary); font-size: 14px; }
+    .contact-box a { color: var(--primary); font-weight: 600; }
+
+    /* BACK TO TOP */
+    .back-top {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .back-top a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      text-decoration: none;
+    }
+    .back-top a:hover { color: var(--primary); }
+
+    /* FOOTER */
+    footer {
+      background: var(--text-primary);
+      color: rgba(255,255,255,.5);
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 13px;
+    }
+    footer a { color: rgba(255,255,255,.7); text-decoration: none; }
+    footer a:hover { color: white; }
+
+    @media (max-width: 600px) {
+      .policy-header { padding: 24px 20px; }
+      .content-card { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <div class="logo-icon">&#9711;</div>
+        <span class="logo-name">My Steady Circle</span>
+      </a>
+      <a href="/" class="nav-back">&#8592; Home</a>
+    </div>
+  </nav>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <div class="policy-header">
+      <div class="policy-badge">Legal</div>
+      <h1>Privacy Policy</h1>
+      <div class="policy-meta">
+        <span>Effective Date: June 1, 2026</span>
+        <span>Last Updated: June 1, 2026</span>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content-card">
+
+      <p>My Steady Circle ("we," "us," or "our") operates the My Steady Circle mobile application (the "App"). This Privacy Policy explains what information we collect, how we use it, who we share it with, and your rights regarding your personal information.</p>
+      <p>By using the App, you agree to the practices described in this policy. If you do not agree, do not use the App.</p>
+
+      <h2>1. Who We Are</h2>
+      <p>My Steady Circle is a consumer social wellness application that lets you record short video check-ins and share them with a group of trusted people (your "circle"). It is not a clinical, medical, or treatment service. No healthcare provider, clinician, or licensed professional reviews your videos or communications through this App.</p>
+      <div class="contact-box">
+        <p><strong>Contact us:</strong> <a href="mailto:mysteadycircle@gmail.com">mysteadycircle@gmail.com</a></p>
+      </div>
+
+      <h2>2. Information We Collect</h2>
+
+      <h3>2.1 Information You Provide</h3>
+      <p><strong>Account information</strong><br>When you create an account, we collect your email address. This is used to identify your account and send you transactional messages (invite confirmations, account notifications).</p>
+      <p><strong>Videos</strong><br>If you are a subscriber, you can record and submit short video check-ins through the App. Videos are stored on our servers and shared with the circle members you have chosen.</p>
+      <p><strong>Encouragement messages</strong><br>Circle members can send short text messages (up to 250 characters) to the subscriber they support. These messages are not permanent records — they expire automatically 24 hours after being sent.</p>
+      <p><strong>Circle invitations</strong><br>When you invite someone to join your circle, we collect the email address you provide for that person in order to send the invitation.</p>
+
+      <h3>2.2 Information Collected Automatically</h3>
+      <p><strong>Location</strong><br>When you record a video, the App captures your device's geographic location (latitude and longitude) at the moment you open the recording screen. This is a single foreground capture — the App does not track your location in the background, continuously, or at any other time. Location is attached to your video check-in record and shared with your circle members as a "last known location."</p>
+      <p>The App will request your permission before accessing your location. You may decline location access; recording will still work but no location will be shared with your circle.</p>
+      <p><strong>Push notification token</strong><br>If you enable push notifications, the App stores a device push token so we can send you notification alerts (such as video reminders and encouragement notifications). We do not use this token for advertising.</p>
+      <p><strong>Device and usage data</strong><br>We collect basic technical information needed to operate the App (device platform, app version, crash reports). We do not collect advertising identifiers or build behavioral profiles for advertising purposes.</p>
+
+      <h3>2.3 Payment Information</h3>
+      <p>Subscriptions are managed through Stripe, a third-party payment processor. When you subscribe, you are directed to a Stripe-hosted checkout page in your device browser. We never see or store your payment card number, expiration date, or CVV. We store only your Stripe customer ID and subscription status, which are opaque identifiers used to verify whether your subscription is active.</p>
+
+      <h2>3. How We Use Your Information</h2>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Information</th><th>How We Use It</th></tr>
+          <tr><td><strong>Email address</strong></td><td>Account creation, authentication, transactional notifications, responding to support requests</td></tr>
+          <tr><td><strong>Videos</strong></td><td>Delivering check-ins to your chosen circle members; automatic deletion per retention policy below</td></tr>
+          <tr><td><strong>Location</strong></td><td>Sharing your last known location with your circle members as part of the check-in</td></tr>
+          <tr><td><strong>Encouragement messages</strong></td><td>Delivering messages to the subscriber; automatic expiry after 24 hours</td></tr>
+          <tr><td><strong>Push token</strong></td><td>Sending push notification alerts you have opted into</td></tr>
+          <tr><td><strong>Stripe IDs</strong></td><td>Verifying subscription status to unlock video recording features</td></tr>
+        </table>
+      </div>
+      <p>We do not use your information to build advertising profiles, sell your data, or make automated decisions that produce legal or similarly significant effects about you.</p>
+
+      <h2>4. How Long We Keep Your Information</h2>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Data</th><th>Retention</th></tr>
+          <tr><td><strong>Video files</strong></td><td>Deleted automatically within 24 hours of upload, or sooner once all of your circle members have viewed the video</td></tr>
+          <tr><td><strong>Video check-in record (metadata)</strong></td><td>Retained as a permanent record in our database (timestamp, word prompt, subscriber identity). The video file is deleted but the record of the check-in exists indefinitely unless you delete your account</td></tr>
+          <tr><td><strong>Encouragement messages</strong></td><td>Deleted automatically 24 hours after sending</td></tr>
+          <tr><td><strong>Location (attached to check-in)</strong></td><td>Retained as part of the check-in record</td></tr>
+          <tr><td><strong>Account information (email)</strong></td><td>Retained until you delete your account</td></tr>
+          <tr><td><strong>Push tokens</strong></td><td>Retained while you have an active account; deleted on account deletion</td></tr>
+          <tr><td><strong>Stripe subscription records</strong></td><td>Retained as required by Stripe's terms and applicable financial recordkeeping requirements</td></tr>
+        </table>
+      </div>
+      <p>If you delete your account, we will delete your user account, associated video check-in records, circle membership records, and Cognito credentials. Some information may be retained in encrypted backups for a short period before being purged.</p>
+
+      <h2>5. Who We Share Your Information With</h2>
+      <p><strong>Your circle members</strong><br>Videos you record, and the location captured at recording time, are shared with the people you have invited to your circle. Circle members can view your videos and see your last known location. You control who is in your circle.</p>
+      <p><strong>Service providers</strong><br>We use third-party service providers who process data on our behalf under contractual obligations to protect it. These include:</p>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Provider</th><th>Purpose</th><th>Data Shared</th></tr>
+          <tr><td><strong>Amazon Web Services (AWS)</strong></td><td>Cloud infrastructure, database, file storage</td><td>All app data at rest and in transit</td></tr>
+          <tr><td><strong>Amazon Cognito</strong></td><td>User authentication</td><td>Email address, account credentials</td></tr>
+          <tr><td><strong>Stripe</strong></td><td>Subscription payment processing</td><td>Email address, subscription details</td></tr>
+          <tr><td><strong>Expo / EAS</strong></td><td>Mobile app delivery, push notification infrastructure</td><td>Push notification tokens</td></tr>
+          <tr><td><strong>Apple (APNs)</strong></td><td>iOS push notification delivery</td><td>Push token, notification content</td></tr>
+          <tr><td><strong>Google (FCM)</strong></td><td>Android push notification delivery</td><td>Push token, notification content</td></tr>
+        </table>
+      </div>
+      <p><strong>Legal requirements</strong><br>We may disclose your information if required by law, valid legal process, or to protect the rights, property, or safety of our users or the public.</p>
+      <p><strong>Business transfers</strong><br>If we are acquired, merge with another company, or transfer our assets, your information may be transferred as part of that transaction. We will notify you before your information is subject to a materially different privacy policy.</p>
+      <p><strong>We do not sell your personal information.</strong> We do not share your personal information with third parties for advertising or cross-context behavioral advertising purposes.</p>
+
+      <h2>6. Your Privacy Rights</h2>
+
+      <h3>6.1 California Residents (CCPA/CPRA)</h3>
+      <p>If you are a California resident, you have the following rights under the California Consumer Privacy Act and California Privacy Rights Act:</p>
+      <ul>
+        <li><strong>Right to know</strong> — You may request that we disclose the categories and specific pieces of personal information we have collected about you, the sources of that information, the purposes for collecting it, and the categories of third parties with whom we share it.</li>
+        <li><strong>Right to delete</strong> — You may request that we delete the personal information we have collected about you, subject to certain exceptions (e.g., information needed to complete a transaction or comply with law).</li>
+        <li><strong>Right to correct</strong> — You may request that we correct inaccurate personal information we hold about you.</li>
+        <li><strong>Right to opt out of sale or sharing</strong> — We do not sell or share your personal information for cross-context behavioral advertising. You do not need to opt out, but you may contact us if you have questions.</li>
+        <li><strong>Right to limit use of sensitive personal information</strong> — We do not use sensitive personal information (including precise geolocation) for purposes other than providing the App's core functionality.</li>
+        <li><strong>Right to non-discrimination</strong> — We will not discriminate against you for exercising these rights.</li>
+      </ul>
+      <p>To exercise your rights, contact us at <a href="mailto:mysteadycircle@gmail.com">mysteadycircle@gmail.com</a>. We will respond within 45 days. We may need to verify your identity before processing your request.</p>
+
+      <h3>6.2 Washington State Residents (My Health MY Data Act)</h3>
+      <p>If you are a Washington State resident, the Washington My Health MY Data Act (MHMD) provides additional protections for consumer health data. Location data and wellness-related content you share through this App may qualify as consumer health data under MHMD.</p>
+      <p>You have the following rights:</p>
+      <ul>
+        <li><strong>Right to confirm and access</strong> — You may request confirmation of whether we collect, share, or sell your consumer health data, and request access to that data.</li>
+        <li><strong>Right to delete</strong> — You may request deletion of your consumer health data, including location data attached to your check-in records. Note that some metadata (timestamps, check-in record structure) may be retained as required by our operational systems.</li>
+        <li><strong>Right to withdraw consent</strong> — You may withdraw consent for us to collect your location at any time by revoking location permission in your device settings. Future recordings will proceed without location capture.</li>
+        <li><strong>No sale of consumer health data</strong> — We do not sell consumer health data. We do not share it with third parties except as described in Section 5 (service providers under contract and circle members you have authorized).</li>
+      </ul>
+      <p>To exercise your MHMD rights, contact us at <a href="mailto:mysteadycircle@gmail.com">mysteadycircle@gmail.com</a>.</p>
+
+      <h3>6.3 All Users</h3>
+      <p>Regardless of your location, you may:</p>
+      <ul>
+        <li><strong>Update your account information</strong> — You can update your email address through account settings.</li>
+        <li><strong>Delete your account</strong> — You can request account deletion by contacting us at <a href="mailto:mysteadycircle@gmail.com">mysteadycircle@gmail.com</a>. We will delete your account and associated data within 30 days.</li>
+        <li><strong>Manage push notifications</strong> — You can disable push notifications in your device settings at any time.</li>
+        <li><strong>Manage circle membership</strong> — You can remove circle members from your circle at any time in the App.</li>
+        <li><strong>Leave a circle</strong> — Circle members can remove themselves from a subscriber's circle at any time in the App.</li>
+      </ul>
+
+      <h2>7. Data Security</h2>
+      <p>We use industry-standard security measures to protect your information:</p>
+      <ul>
+        <li>All data in transit is encrypted using TLS</li>
+        <li>Data at rest is encrypted using AES-256 (S3 SSE-KMS, Aurora KMS)</li>
+        <li>Video files are stored using server-generated UUIDs with no personally identifiable information in file paths</li>
+        <li>Pre-signed video access URLs expire after 15 minutes</li>
+        <li>Access to your data requires a valid authenticated session</li>
+      </ul>
+      <p>No method of transmission or storage is 100% secure. We cannot guarantee absolute security, but we are committed to protecting your information using commercially reasonable means.</p>
+
+      <h2>8. Children's Privacy</h2>
+      <p>The App is not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected information from a child under 13, contact us at <a href="mailto:mysteadycircle@gmail.com">mysteadycircle@gmail.com</a> and we will delete it promptly.</p>
+
+      <h2>9. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we make material changes, we will notify you through the App or by email at least 30 days before the changes take effect. Your continued use of the App after the effective date of the revised policy constitutes your acceptance.</p>
+
+      <h2>10. Contact Us</h2>
+      <p>If you have questions, concerns, or requests regarding this Privacy Policy or your personal information, contact us:</p>
+      <div class="contact-box">
+        <p><strong>Email:</strong> <a href="mailto:mysteadycircle@gmail.com">mysteadycircle@gmail.com</a><br>
+        For California residents: submit a verifiable consumer request under CCPA.<br>
+        For Washington residents: submit a request under the My Health MY Data Act.<br><br>
+        We aim to respond to all privacy inquiries within 45 days.</p>
+      </div>
+
+      <h2>Revision History</h2>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Date</th><th>Change</th></tr>
+          <tr><td>2026-06-01</td><td>Initial publication</td></tr>
+        </table>
+      </div>
+
+      <div class="back-top"><a href="#">&#8593; Back to top</a></div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="/">My Steady Circle</a> &nbsp;&middot;&nbsp;
+    <a href="/privacy">Privacy Policy</a> &nbsp;&middot;&nbsp;
+    <a href="mailto:mysteadycircle@gmail.com">Contact</a>
+    <br><br>
+    &copy; 2026 My Steady Circle. All rights reserved.
+  </footer>
+
+</body>
+</html>
